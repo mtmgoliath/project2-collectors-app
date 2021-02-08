@@ -2,11 +2,34 @@
 
 $db = new PDO('mysql:host=db; dbname=collector_project', 'root', 'password');
 $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+$nameQuery = $db->prepare("SELECT `name` FROM `taxidermy_collection`;");
+$nameQuery->execute();
+
+$originQuery = $db->prepare("SELECT `origin` FROM `taxidermy_collection`;");
+$originQuery->execute();
+
+$familyQuery = $db->prepare("SELECT `family` FROM `taxidermy_collection`;");
+$familyQuery->execute();
+
+$methodQuery = $db->prepare("SELECT `method` FROM `taxidermy_collection`;");
+$methodQuery->execute();
+
+$ratingQuery = $db->prepare("SELECT `rating` FROM `taxidermy_collection`;");
+$ratingQuery->execute();
+
+$descriptionQuery = $db->prepare("SELECT `description` FROM `taxidermy_collection`;");
+$descriptionQuery->execute();
+
+$imageQuery = $db->prepare("SELECT `image` FROM `taxidermy_collection`;");
+$imageQuery->execute();
 
 ?>
 
 <!DOCTYPE html>
 <html lang="en-GB">
+    <head>
+        <title>Taxidermy Collection</title>
+    </head>
     <header>
         <h1>Life in Death</h1>
         <h2>Curios & Oddities</h2>
@@ -18,75 +41,278 @@ $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
     </section>
     <section class="collection">
         <div class="collection_item">
-            <img src="images/brown-owl.jpeg">
-            <h3>Brown Owl</h3>
+            <img src="<?//image path
+            $imageVariable = $imageQuery->fetch();
+            foreach($imageVariable as $value) {
+                echo $value;
+            } ?>"  alt="<? //description
+            $descriptionVariable = $descriptionQuery->fetch();
+            foreach($descriptionVariable as $value) {
+                echo $value;
+            } ?>">
+            <h3><? //just the name value
+                $nameVariable = $nameQuery->fetch();
+                foreach($nameVariable as $value) {
+                    echo $value;
+                } ?></h3>
             <ul>
-                <li class="origin">Origin: UK</li>
-                <li class="family">Family: Bird</li>
-                <li class="preservation_type">Preservation Type: Dry</li>
-                <li class="quality">Rating: 3/10</li>
+                <li class="origin">Origin: <? //origin
+                    $originVariable = $originQuery->fetch();
+                    foreach($originVariable as $value) {
+                        echo $value;
+                    } ?></li>
+                <li class="family">Family: <? //family
+                    $familyVariable = $familyQuery->fetch();
+                    foreach($familyVariable as $value) {
+                        echo $value;
+                    } ?></li>
+                <li class="preservation_method"><? //method
+                    $methodVariable = $methodQuery->fetch();
+                    foreach($methodVariable as $value) {
+                        echo $value;
+                    } ?></li>
+                <li class="quality">Rating: <? //rating
+                    $ratingVariable = $ratingQuery->fetch();
+                    foreach($ratingVariable as $value) {
+                        echo $value;
+                    } ?>/10</li>
             </ul>
         </div>
+
         <div class="collection_item">
-            <img src="images/fox.jpg">
-            <h3>Red Fox</h3>
+            <img src="<?//image path
+            $imageVariable = $imageQuery->fetch();
+            foreach($imageVariable as $value) {
+                echo $value;
+            } ?>"  alt="<? //description
+            $descriptionVariable = $descriptionQuery->fetch();
+            foreach($descriptionVariable as $value) {
+                echo $value;
+            } ?>">
+            <h3><? //just the name value
+                $nameVariable = $nameQuery->fetch();
+                foreach($nameVariable as $value) {
+                    echo $value;
+                } ?></h3>
             <ul>
-                <li class="origin">Origin: Siberia</li>
-                <li class="family">Family: Mammal</li>
-                <li class="preservation_type">Preservation Type: Dry</li>
-                <li class="quality">Rating: 7/10</li>
+                <li class="origin">Origin: <? //origin
+                    $originVariable = $originQuery->fetch();
+                    foreach($originVariable as $value) {
+                        echo $value;
+                    } ?></li>
+                <li class="family">Family: <? //family
+                    $familyVariable = $familyQuery->fetch();
+                    foreach($familyVariable as $value) {
+                        echo $value;
+                    } ?></li>
+                <li class="preservation_method"><? //method
+                    $methodVariable = $methodQuery->fetch();
+                    foreach($methodVariable as $value) {
+                        echo $value;
+                    } ?></li>
+                <li class="quality">Rating: <? //rating
+                    $ratingVariable = $ratingQuery->fetch();
+                    foreach($ratingVariable as $value) {
+                        echo $value;
+                    } ?>/10</li>
             </ul>
         </div>
+
         <div class="collection_item">
-            <img src="images/elephant-fetus.jpg">
-            <h3>Elephant Fetus</h3>
+            <img src="<?//image path
+            $imageVariable = $imageQuery->fetch();
+            foreach($imageVariable as $value) {
+                echo $value;
+            } ?>"  alt="<? //description
+            $descriptionVariable = $descriptionQuery->fetch();
+            foreach($descriptionVariable as $value) {
+                echo $value;
+            } ?>">
+            <h3><? //just the name value
+                $nameVariable = $nameQuery->fetch();
+                foreach($nameVariable as $value) {
+                    echo $value;
+                } ?></h3>
             <ul>
-                <li class="origin">Origin: India</li>
-                <li class="family">Family: Mammal</li>
-                <li class="preservation_type">Preservation Type: Wet</li>
-                <li class="quality">Rating: 8/10</li>
+                <li class="origin">Origin: <? //origin
+                    $originVariable = $originQuery->fetch();
+                    foreach($originVariable as $value) {
+                        echo $value;
+                    } ?></li>
+                <li class="family">Family: <? //family
+                    $familyVariable = $familyQuery->fetch();
+                    foreach($familyVariable as $value) {
+                        echo $value;
+                    } ?></li>
+                <li class="preservation_method"><? //method
+                    $methodVariable = $methodQuery->fetch();
+                    foreach($methodVariable as $value) {
+                        echo $value;
+                    } ?></li>
+                <li class="quality">Rating: <? //rating
+                    $ratingVariable = $ratingQuery->fetch();
+                    foreach($ratingVariable as $value) {
+                        echo $value;
+                    } ?>/10</li>
             </ul>
         </div>
+
         <div class="collection_item">
-            <img src="images/nile-crocodile.jpg">
-            <h3>Crocodile (Nile)</h3>
+            <img src="<?//image path
+            $imageVariable = $imageQuery->fetch();
+            foreach($imageVariable as $value) {
+                echo $value;
+            } ?>"  alt="<? //description
+            $descriptionVariable = $descriptionQuery->fetch();
+            foreach($descriptionVariable as $value) {
+                echo $value;
+            } ?>">
+            <h3><? //just the name value
+                $nameVariable = $nameQuery->fetch();
+                foreach($nameVariable as $value) {
+                    echo $value;
+                } ?></h3>
             <ul>
-                <li class="origin">Origin: Egypt</li>
-                <li class="family">Family: Reptile</li>
-                <li class="preservation_type">Preservation Type: Dry</li>
-                <li class="quality">Rating: 9/10</li>
+                <li class="origin">Origin: <? //origin
+                    $originVariable = $originQuery->fetch();
+                    foreach($originVariable as $value) {
+                        echo $value;
+                    } ?></li>
+                <li class="family">Family: <? //family
+                    $familyVariable = $familyQuery->fetch();
+                    foreach($familyVariable as $value) {
+                        echo $value;
+                    } ?></li>
+                <li class="preservation_method"><? //method
+                    $methodVariable = $methodQuery->fetch();
+                    foreach($methodVariable as $value) {
+                        echo $value;
+                    } ?></li>
+                <li class="quality">Rating: <? //rating
+                    $ratingVariable = $ratingQuery->fetch();
+                    foreach($ratingVariable as $value) {
+                        echo $value;
+                    } ?>/10</li>
             </ul>
         </div>
+
         <div class="collection_item">
-            <img src="images/magpie.jpeg">
-            <h3>Magpie</h3>
+            <img src="<?//image path
+            $imageVariable = $imageQuery->fetch();
+            foreach($imageVariable as $value) {
+                echo $value;
+            } ?>"  alt="<? //description
+            $descriptionVariable = $descriptionQuery->fetch();
+            foreach($descriptionVariable as $value) {
+                echo $value;
+            } ?>">
+            <h3><? //just the name value
+                $nameVariable = $nameQuery->fetch();
+                foreach($nameVariable as $value) {
+                    echo $value;
+                } ?></h3>
             <ul>
-                <li class="origin">Origin: U.K.</li>
-                <li class="family">Family: Bird</li>
-                <li class="preservation_type">Preservation Type: Dry</li>
-                <li class="quality">Rating: 5/10</li>
+                <li class="origin">Origin: <? //origin
+                    $originVariable = $originQuery->fetch();
+                    foreach($originVariable as $value) {
+                        echo $value;
+                    } ?></li>
+                <li class="family">Family: <? //family
+                    $familyVariable = $familyQuery->fetch();
+                    foreach($familyVariable as $value) {
+                        echo $value;
+                    } ?></li>
+                <li class="preservation_method"><? //method
+                    $methodVariable = $methodQuery->fetch();
+                    foreach($methodVariable as $value) {
+                        echo $value;
+                    } ?></li>
+                <li class="quality">Rating: <? //rating
+                    $ratingVariable = $ratingQuery->fetch();
+                    foreach($ratingVariable as $value) {
+                        echo $value;
+                    } ?>/10</li>
             </ul>
         </div>
+
         <div class="collection_item">
-            <img src="images/rhino-beetle.jpeg">
-            <h3>Rhino Beetle</h3>
+            <img src="<?//image path
+            $imageVariable = $imageQuery->fetch();
+            foreach($imageVariable as $value) {
+                echo $value;
+            } ?>"  alt="<? //description
+            $descriptionVariable = $descriptionQuery->fetch();
+            foreach($descriptionVariable as $value) {
+                echo $value;
+            } ?>">
+            <h3><? //just the name value
+                $nameVariable = $nameQuery->fetch();
+                foreach($nameVariable as $value) {
+                    echo $value;
+                } ?></h3>
             <ul>
-                <li class="origin">Origin: Indonesia</li>
-                <li class="family">Family: Insect</li>
-                <li class="preservation_type">Preservation Type: Dry</li>
-                <li class="quality">Rating: 10/10</li>
+                <li class="origin">Origin: <? //origin
+                    $originVariable = $originQuery->fetch();
+                    foreach($originVariable as $value) {
+                        echo $value;
+                    } ?></li>
+                <li class="family">Family: <? //family
+                    $familyVariable = $familyQuery->fetch();
+                    foreach($familyVariable as $value) {
+                        echo $value;
+                    } ?></li>
+                <li class="preservation_method"><? //method
+                    $methodVariable = $methodQuery->fetch();
+                    foreach($methodVariable as $value) {
+                        echo $value;
+                    } ?></li>
+                <li class="quality">Rating: <? //rating
+                    $ratingVariable = $ratingQuery->fetch();
+                    foreach($ratingVariable as $value) {
+                        echo $value;
+                    } ?>/10</li>
             </ul>
         </div>
+
         <div class="collection_item">
-            <img src="images/jumping-spider.jpeg">
-            <h3>Jumping Spider</h3>
+            <img src="<?//image path
+            $imageVariable = $imageQuery->fetch();
+            foreach($imageVariable as $value) {
+                echo $value;
+            } ?>"  alt="<? //description
+            $descriptionVariable = $descriptionQuery->fetch();
+            foreach($descriptionVariable as $value) {
+                echo $value;
+            } ?>">
+            <h3><? //just the name value
+                $nameVariable = $nameQuery->fetch();
+                foreach($nameVariable as $value) {
+                    echo $value;
+                } ?></h3>
             <ul>
-                <li class="origin">Origin: Indonesia</li>
-                <li class="family">Family: Insect</li>
-                <li class="preservation_type">Preservation Type: Resin</li>
-                <li class="quality">Rating: 10/10</li>
+                <li class="origin">Origin: <? //origin
+                    $originVariable = $originQuery->fetch();
+                    foreach($originVariable as $value) {
+                        echo $value;
+                    } ?></li>
+                <li class="family">Family: <? //family
+                    $familyVariable = $familyQuery->fetch();
+                    foreach($familyVariable as $value) {
+                        echo $value;
+                    } ?></li>
+                <li class="preservation_method"><? //method
+                    $methodVariable = $methodQuery->fetch();
+                    foreach($methodVariable as $value) {
+                        echo $value;
+                    } ?></li>
+                <li class="quality">Rating: <? //rating
+                    $ratingVariable = $ratingQuery->fetch();
+                    foreach($ratingVariable as $value) {
+                        echo $value;
+                    } ?>/10</li>
             </ul>
         </div>
+
     </section>
 
 </html>
