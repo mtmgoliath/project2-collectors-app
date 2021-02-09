@@ -4,10 +4,7 @@ $db = new PDO('mysql:host=db; dbname=collector_project', 'root', 'password');
 $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 $fullQuery = $db->prepare("SELECT * FROM `taxidermy_collection`;");
 $fullQuery->execute();
-
-
 ?>
-
 <!DOCTYPE html>
 <html lang="en-GB">
 <head>
@@ -45,6 +42,5 @@ $fullQuery->execute();
     <? } ?>
 </ul>
 </body>
-
 </html>
 
