@@ -54,12 +54,12 @@ $imageQuery->execute();
                 foreach($descriptionVariable as $value) {
                     echo $value;
                 } ?>">
-                <h3><? //just the name value
-                    $nameVariable = $nameQuery->fetch();
-                    foreach($nameVariable as $value) {
-                        echo $value;
-                    } ?></h3>
                 <div class="stats">
+                    <h3><? //just the name value
+                        $nameVariable = $nameQuery->fetch();
+                        foreach($nameVariable as $value) {
+                            echo $value;
+                        } ?></h3>
                     <ul>
                         <li class="origin">Origin: <? //origin
                             $originVariable = $originQuery->fetch();
@@ -94,12 +94,12 @@ $imageQuery->execute();
                 foreach($descriptionVariable as $value) {
                     echo $value;
                 } ?>">
-                <h3><? //just the name value
-                    $nameVariable = $nameQuery->fetch();
-                    foreach($nameVariable as $value) {
-                        echo $value;
-                    } ?></h3>
                 <div class="stats">
+                    <h3><? //just the name value
+                        $nameVariable = $nameQuery->fetch();
+                        foreach($nameVariable as $value) {
+                            echo $value;
+                        } ?></h3>
                     <ul>
                         <li class="origin">Origin: <? //origin
                             $originVariable = $originQuery->fetch();
@@ -134,12 +134,12 @@ $imageQuery->execute();
                 foreach($descriptionVariable as $value) {
                     echo $value;
                 } ?>">
-                <h3><? //just the name value
-                    $nameVariable = $nameQuery->fetch();
-                    foreach($nameVariable as $value) {
-                        echo $value;
-                    } ?></h3>
                 <div class="stats">
+                    <h3><? //just the name value
+                        $nameVariable = $nameQuery->fetch();
+                        foreach($nameVariable as $value) {
+                            echo $value;
+                        } ?></h3>
                     <ul>
                         <li class="origin">Origin: <? //origin
                             $originVariable = $originQuery->fetch();
@@ -174,12 +174,12 @@ $imageQuery->execute();
                 foreach($descriptionVariable as $value) {
                     echo $value;
                 } ?>">
-                <h3><? //just the name value
-                    $nameVariable = $nameQuery->fetch();
-                    foreach($nameVariable as $value) {
-                        echo $value;
-                    } ?></h3>
                 <div class="stats">
+                    <h3><? //just the name value
+                        $nameVariable = $nameQuery->fetch();
+                        foreach($nameVariable as $value) {
+                            echo $value;
+                        } ?></h3>
                     <ul>
                         <li class="origin">Origin: <? //origin
                             $originVariable = $originQuery->fetch();
@@ -214,12 +214,12 @@ $imageQuery->execute();
                 foreach($descriptionVariable as $value) {
                     echo $value;
                 } ?>">
-                <h3><? //just the name value
-                    $nameVariable = $nameQuery->fetch();
-                    foreach($nameVariable as $value) {
-                        echo $value;
-                    } ?></h3>
                 <div class="stats">
+                    <h3><? //just the name value
+                        $nameVariable = $nameQuery->fetch();
+                        foreach($nameVariable as $value) {
+                            echo $value;
+                        } ?></h3>
                     <ul>
                         <li class="origin">Origin: <? //origin
                             $originVariable = $originQuery->fetch();
@@ -254,12 +254,12 @@ $imageQuery->execute();
                 foreach($descriptionVariable as $value) {
                     echo $value;
                 } ?>">
-                <h3><? //just the name value
-                    $nameVariable = $nameQuery->fetch();
-                    foreach($nameVariable as $value) {
-                        echo $value;
-                    } ?></h3>
                 <div class="stats">
+                    <h3><? //just the name value
+                        $nameVariable = $nameQuery->fetch();
+                        foreach($nameVariable as $value) {
+                            echo $value;
+                        } ?></h3>
                     <ul>
                         <li class="origin">Origin: <? //origin
                             $originVariable = $originQuery->fetch();
@@ -294,12 +294,12 @@ $imageQuery->execute();
                 foreach($descriptionVariable as $value) {
                     echo $value;
                 } ?>">
-                <h3><? //just the name value
-                    $nameVariable = $nameQuery->fetch();
-                    foreach($nameVariable as $value) {
-                        echo $value;
-                    } ?></h3>
                 <div class="stats">
+                    <h3><? //just the name value
+                        $nameVariable = $nameQuery->fetch();
+                        foreach($nameVariable as $value) {
+                            echo $value;
+                        } ?></h3>
                     <ul>
                         <li class="origin">Origin: <? //origin
                             $originVariable = $originQuery->fetch();
@@ -324,6 +324,7 @@ $imageQuery->execute();
                     </ul>
                 </div>
             </div>
+
         </section>
     </body>
 
