@@ -1,0 +1,97 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+} 
+
+body {
+    font-size: 10px;
+    overflow: no-display;
+
+}
+
+header {
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+    font-family: Herculanum, Helvetica;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+#intro p{
+    text-align: center;
+    font-size: 1.75rem;
+    margin-left: 4rem;
+    margin-right: 4rem;
+    padding: 2rem;
+    border: black;
+    border-style: double;
+    font-family: Helvetica;
+
+}
+
+.collection {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.collection_item {
+    border: black;
+    border-style: double;
+    max-width: 30%;
+    font-family: Helvetica;
+    font-size: 1.5rem;
+    margin-bottom: 4rem;
+
+}
+
+.stats {
+    text-align: justify;
+    justify-content: center;
+}
+
+.stats h3{
+    border: white;
+    border-style: double;
+    text-align: center;
+    font-family: Herculanum, Helvetica;
+    color: #ffffff;
+    background-color: #000000;
+}
+
+.collection_item img {
+    max-width: 100%;
+    min-height: 400px;
+    max-height: 400px;
+}
+
+@media screen and (max-width: 1400px) {
+    .collection_item img {
+        min-height: 100px;
+        max-height: 300px;
+    }
+    .stats {
+        font-size: 1.25rem;
+    }
+    #intro p{
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .stats {
+        font-size: 1rem;
+    }
+    #intro p{
+        font-size: 1.25rem;
+    }
+}
