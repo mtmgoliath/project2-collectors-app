@@ -1,50 +1,28 @@
 <?php
 $db = new PDO('mysql:host=db; dbname=collector_project', 'root', 'password');
-$db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 $fullQuery = $db->prepare("SELECT * FROM `taxidermy_collection`;");
+$fullQuery->setFetchMode(PDO::FETCH_ASSOC);
 $fullQuery->execute();
 $results = $fullQuery->fetchAll();
-var_dump(count($results));
 
-?>
-
-    <!DOCTYPE html>
-    <html lang="en-GB">
-    <head>
-        <title>Taxidermy Collection</title>
-        <link rel="stylesheet" type="text/css" href="normalize.css">
-        <link rel="stylesheet" type="text/css" href="style.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-    </head>
-    <body>
-    <header>
-        <h1>Life in Death</h1>
-        <h2>Curios & Oddities</h2>
-    </header>
-    <section id="intro">
-        <p>Here is a nice gallery of my Taxidermy Collection so far.
-            Items are sorted by their Name/ID and include details about their origin,
-            as well as an overall rating out of 10.</p>
-    </section>
-    <ul class="collection">
-        <? echo populateItems($results) ?>
-    </ul>
-    </body>
-    </html>
-
-
-<?php
-
+///INDEX POSITION//
 function populateItems($results) {
+    $collectionString = '';
     foreach ($results as $row) {
-        $collectionString = '<li class="collection_item "><div class="stats"><span class="image_wrapper">';
-        $collectionString .= '<img src="' . $row['image'] . '"';
-        $collectionString .= ' alt="' . $row['description'] . '"></span>';
-        $collectionString .= '<h3>' . $row['name'] . '</h3>';
-        $collectionString .= '<ul><li class="origin">Origin:' . $row['origin'] . '</li>';
-        $collectionString .= '<li class="family">Family:' . $row['family'] . '</li>';
-        $collectionString .= '<li class="preservation_type">' . $row['method'] . '</li>';
-        $collectionString .= '<li class="quality">Rating:' . $row['rating'] . '/10</li>' . '</ul></div></li>';
-        return $collectionString;
+        $collectionString .= populateItem($row);
     }
+    return $collectionString;
+}
+
+//ASSOCIATIVE POSITION//
+function populateItem($row) {
+    $rowString = '<li class="collection_item "><div class="stats"><span class="image_wrapper">';
+    $rowString .= '<img src="' . $row['image'] . '"';
+    $rowString .= ' alt="' . $row['description'] . '"></span>';
+    $rowString .= '<h3>' . $row['name'] . '</h3>';
+    $rowString .= '<ul><li class="origin">Origin:' . $row['origin'] . '</li>';
+    $rowString .= '<li class="family">Family:' . $row['family'] . '</li>';
+    $rowString .= '<li class="preservation_type">' . $row['method'] . '</li>';
+    $rowString .= '<li class="quality">Rating:' . $row['rating'] . '/10</li>' . '</ul></div></li>';
+    return $rowString;
 }

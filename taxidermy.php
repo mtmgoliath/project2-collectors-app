@@ -1,9 +1,5 @@
 <?php
-
-$db = new PDO('mysql:host=db; dbname=collector_project', 'root', 'password');
-$db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
-$fullQuery = $db->prepare("SELECT * FROM `taxidermy_collection`;");
-$fullQuery->execute();
+require 'functions.php';
 ?>
 <!DOCTYPE html>
 <html lang="en-GB">
@@ -24,22 +20,7 @@ $fullQuery->execute();
         as well as an overall rating out of 10.</p>
 </section>
 <ul class="collection">
-    <? while ($row = $fullQuery->fetch()) { ?>
-        <li class="collection_item ">
-            <div class="stats">
-                    <span class="image_wrapper">
-                        <img src="<?=$row['image']?>">
-                    </span>
-                <h3><?=$row['name']?></h3>
-                <ul>
-                    <li class="origin">Origin: <?=$row['origin']?></li>
-                    <li class="family">Family: <?=$row['family']?></li>
-                    <li class="preservation_type"><?=$row['method']?></li>
-                    <li class="quality">Rating: <?=$row['rating']?>/10</li>
-                </ul>
-            </div>
-        </li>
-    <? } ?>
+    <? echo populateItems($results);?>
 </ul>
-</body>
+</body
 </html>
