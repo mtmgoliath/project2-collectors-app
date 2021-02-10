@@ -43,4 +43,3 @@ $fullQuery->execute();
 </ul>
 </body>
 </html>
-

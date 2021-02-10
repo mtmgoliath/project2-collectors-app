@@ -45,10 +45,8 @@ h2 {
     list-style: none;
 }
 
-
 .collection_item {
     width: 50%;
-
 }
 
 .collection_item img {
@@ -98,7 +96,6 @@ h2 {
 }
 
 @media screen and (max-width: 1400px) {
-
     .collection_item img {
         min-height: 300px;
         max-height: 300px;
@@ -115,7 +112,6 @@ h2 {
     .collection_item {
         width: 100%;
     }
-
     .collection {
         flex-direction: column;
     }
