@@ -1,7 +1,7 @@
 <?php
 
 ///INDEX POSITION//
-function populateItems($results) {
+function populateItems(array $results) :string {
     $collectionString = '';
     foreach ($results as $row) {
         $collectionString .= populateItem($row);
@@ -10,7 +10,7 @@ function populateItems($results) {
 }
 
 //ASSOCIATIVE POSITION//
-function populateItem($row) {
+function populateItem(array $row) : string {
     $rowString = '<li class="collection_item "><div class="stats"><span class="image_wrapper">';
     $rowString .= '<img src="' . $row['image'] . '"';
     $rowString .= ' alt="' . $row['description'] . '"></span>';
@@ -22,3 +22,4 @@ function populateItem($row) {
     return $rowString;
 }
 ?>
+

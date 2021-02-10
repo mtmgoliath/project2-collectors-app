@@ -16,9 +16,9 @@ $mockRowOutput .= '<li class="quality">Rating: six/10</li></ul></div></li>';
 
 class PopulateTaxidermyContent extends TestCase {
 
-
+    //Mock functions for input into tests
     public function getMockRow() {
-        $mockRow = [
+        return [
             'name' => 'test',
             'image' => 'one',
             'description' => 'two',
@@ -27,12 +27,10 @@ class PopulateTaxidermyContent extends TestCase {
             'method' => 'five',
             'rating' => 'six'
         ];
-        return $mockRow;
     }
 
     public function getMockRowOutput() {
-        $mockRowOutput = '';
-        $mockRowOutput .= '<li class="collection_item "><div class="stats"><span class="image_wrapper">';
+        $mockRowOutput = '<li class="collection_item "><div class="stats"><span class="image_wrapper">';
         $mockRowOutput .= '<img src="one"';
         $mockRowOutput .= ' alt="two"></span>';
         $mockRowOutput .= '<h3>test</h3>';
@@ -50,6 +48,32 @@ class PopulateTaxidermyContent extends TestCase {
         $expectedOutput = $mockRowOutput;
         $actualOutput = populateItem($input);
         $this->assertEquals($expectedOutput, $actualOutput);
+    }
+
+    public function testMalformedPopulateItem() {
+        $input = 7;
+        //expecting array so will be malformed by int
+        $this->expectException(TypeError::class);
+        populateItem($input);
+    }
+
+    public function testSuccessPopulateItems() {
+        $mockRow = $this->getMockRow();
+        $mockRows = [$mockRow, $mockRow];
+        $mockRowOutput = $this->getMockRowOutput();
+        $mockRowsOutput = $mockRowOutput . $mockRowOutput;
+
+        $input = $mockRows;
+        $expectedOutput = $mockRowsOutput;
+        $actualOutput = populateItems($input);
+        $this->assertEquals($expectedOutput, $actualOutput);
+    }
+
+    public function testMalformedPopulateItems() {
+        $input = 7;
+        //expecting array so will be malformed by int
+        $this->expectException(TypeError::class);
+        populateItem($input);
     }
 }
 ?>
