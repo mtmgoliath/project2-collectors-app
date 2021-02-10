@@ -1,5 +1,6 @@
 <?php
-require 'functions.php';
+require_once 'database-object.php';
+require_once 'populate-taxidermy-content.php';
 ?>
 <!DOCTYPE html>
 <html lang="en-GB">
@@ -24,3 +25,4 @@ require 'functions.php';
 </ul>
 </body
 </html>
+
