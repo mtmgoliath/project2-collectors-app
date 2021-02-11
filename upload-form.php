@@ -31,11 +31,11 @@ if (isset($_POST['item-name'])) {
         <label for="item-method">Preservation Method</label>
         <input name="item-method" type="text" placeholder="i.e. Wet Specimen"/>
         <label for="item-rating">Rating /10:</label>
-        <input name="item-rating" type="text" placeholder="enter a number from 1-10"/>
+        <input name="item-rating" type="number" placeholder="enter a number from 1-10" min="1" max="10"/>
         <label for="item-image">Image URL:</label>
         <input name="item-image" type="text" placeholder="250 characters max"/>
         <label for="item-description">Brief description:</label>
-        <input name="item-description" type="text" placeholder="250 characters max"/>
+        <textarea name="item-description"  placeholder="250 characters max" maxlength="250"></textarea>
         <input name="submit" type="submit">
     </form>
 </div>
