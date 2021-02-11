@@ -15,7 +15,7 @@ require_once 'populate-taxidermy-content.php';
     <h1>Life in Death</h1>
     <h2>Curios & Oddities</h2>
 </header>
-<section id="intro">
+<section class="intro">
     <p>Here is a nice gallery of my Taxidermy Collection so far.
         Items are sorted by their Name/ID and include details about their origin,
         as well as an overall rating out of 10.</p>
