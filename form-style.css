@@ -1,13 +1,57 @@
 body {
     font-size: 10px;
 }
-.form-container {
+
+form {
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
+.intro {
+    border-style: double;
+    padding: 10px;
+    text-align: center;
+    font-family: Herculanum;
+    font-size: 0.75rem;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #000000;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+    margin: 10px 0;
+}
+label {
+    margin-right: 2rem;
+}
+
 header {
     background-color: #000000;
     color: #ffffff;
     text-align: center;
     font-family: Herculanum, Helvetica;
+    font-size: 2rem;
     padding-top: 5rem;
     padding-bottom: 5rem;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+nav a {
+    display: flex;
+    border-style: double;
+    padding: 10px;
+    font-family: Herculanum;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #000000;
 }

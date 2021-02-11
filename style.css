@@ -5,6 +5,22 @@
 body {
     font-size: 10px;
 }
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+nav a {
+    display: flex;
+    border-style: double;
+    padding: 10px;
+    font-family: Herculanum;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #000000;
+
+}
 
 header {
     background-color: #000000;
