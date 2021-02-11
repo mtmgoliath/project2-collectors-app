@@ -1,0 +1,13 @@
+body {
+    font-size: 10px;
+}
+.form-container {
+}
+header {
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+    font-family: Herculanum, Helvetica;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
