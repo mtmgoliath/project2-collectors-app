@@ -1,6 +1,9 @@
 <?php
 
 ///INDEX POSITION//
+///SPLITS RESULTS INTO A ROW FOR EACH INNER ARRAY,
+/// CREATES A LONG STRING WITH THE RESULTS BASED ON NUMBER OF ROWS
+/// THIS WILL UPDATE AUTOMATICALLY AS DB GROWS
 function populateItems(array $results) :string {
     $collectionString = '';
     foreach ($results as $row) {
@@ -10,6 +13,8 @@ function populateItems(array $results) :string {
 }
 
 //ASSOCIATIVE POSITION//
+//TAKES AN ARRAY AND CONVERTS INTO CONCATENATED STRING USING ARRAY KEYS TO FILL IN THE GAPS
+//THIS CAN THEN BE FED INTO THE FOREACH LOOP TO GENERATE THE HTML
 function populateItem(array $row) : string {
     $rowString = '<li class="collection_item "><div class="stats"><span class="image_wrapper">';
     $rowString .= '<img src="' . $row['image'] . '"';
@@ -22,4 +27,3 @@ function populateItem(array $row) : string {
     return $rowString;
 }
 ?>
-
