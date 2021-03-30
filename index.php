@@ -23,6 +23,9 @@ require_once 'populate-taxidermy-content.php';
 <ul class="collection">
     <? echo populateItems($results);?>
 </ul>
+<nav>
+    <a href="upload-form.php">Add items to collection</a>
+</nav>
 </body
 </html>
 
