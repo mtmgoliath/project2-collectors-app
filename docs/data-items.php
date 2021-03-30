@@ -1,5 +1,5 @@
 <?php
-require_once 'form-functions.php';
+require_once 'docs/form-functions.php';
 session_start();
 
 function getDBInsert() {
@@ -24,6 +24,6 @@ $insertItemArray->execute([
 <html lang="en-GB">
 <body>
 <h1>Upload Complete!</h1>
-<a href="index.php">Return to Collection?</a>
+<a href="../index.php">Return to Collection?</a>
 </body>
 </html>

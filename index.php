@@ -1,13 +1,13 @@
 <?php
-require_once 'database-object.php';
-require_once 'populate-taxidermy-content.php';
+require_once 'docs/database-object.php';
+require_once 'docs/populate-taxidermy-content.php';
 ?>
 <!DOCTYPE html>
 <html lang="en-GB">
 <head>
     <title>Taxidermy Collection</title>
-    <link rel="stylesheet" type="text/css" href="normalize.css">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="docs/normalize.css">
+    <link rel="stylesheet" type="text/css" href="docs/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
@@ -24,7 +24,7 @@ require_once 'populate-taxidermy-content.php';
     <? echo populateItems($results);?>
 </ul>
 <nav>
-    <a href="upload-form.php">Add items to collection</a>
+    <a href="docs/upload-form.php">Add items to collection</a>
 </nav>
 </body
 </html>

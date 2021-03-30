@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (isset($_POST['item-name'])) {
-    header('location:/project-collectors-app/data-items.php');
+    header('location:/project-collectors-app/docs/data-items.php');
 }
 ?>
 <html>
@@ -53,7 +53,7 @@ if (isset($_POST['item-name'])) {
         <input name="submit" type="submit">
     </form>
     <nav>
-        <a href="index.php">Return to collection</a>
+        <a href="../index.php">Return to collection</a>
     </nav>
 </div>
 </body>
